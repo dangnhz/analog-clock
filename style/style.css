@@ -29,6 +29,13 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 480px) {
+  .container .switch {
+    top: 1rem;
+    right: -2rem;
+  }
+}
+
 .container .switch .rectangle {
   position: absolute;
   top: 50%;
@@ -40,6 +47,14 @@
   border-radius: 40px;
   -webkit-transition: 0s;
   transition: 0s;
+}
+
+@media only screen and (max-width: 480px) {
+  .container .switch .rectangle {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+  }
 }
 
 .container .switch .circle {
@@ -54,6 +69,14 @@
   border-radius: 40px;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+}
+
+@media only screen and (max-width: 480px) {
+  .container .switch .circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+  }
 }
 
 .container .clock {
@@ -87,16 +110,28 @@
 
 .container .clock .clock-hand.hour {
   width: 10px;
+  height: 20%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .container .clock .clock-hand.hour {
+    width: 8px;
+  }
+}
+
+.container .clock .clock-hand.minute {
+  width: 7px;
   height: 25%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.container .clock .clock-hand.minute {
-  width: 7px;
-  height: 30%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+@media only screen and (max-width: 480px) {
+  .container .clock .clock-hand.minute {
+    width: 5px;
+  }
 }
 
 .container .clock .clock-hand.second {
@@ -301,6 +336,13 @@
           transform: translate(40px, -50%);
   -webkit-box-shadow: 10px 10px 24px #000000;
           box-shadow: 10px 10px 24px #000000;
+}
+
+@media only screen and (max-width: 480px) {
+  .container.dark .switch.active .circle {
+    -webkit-transform: translate(20px, -50%);
+            transform: translate(20px, -50%);
+  }
 }
 
 .container.dark .clock {
